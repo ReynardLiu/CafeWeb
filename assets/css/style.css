@@ -1,0 +1,92 @@
+/* Warna Tema: Light Yellow (#FFF8E7) & Coffee Brown (#5C3A21) */
+body {
+    background-color: #FFF8E7;
+    color: #5C3A21;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.font-title {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Navbar & Logo */
+.ruri-navbar {
+    background-color: #FFF8E7;
+    border-bottom: 2px solid #F5E8C7;
+}
+
+.ruri-logo {
+    height: 50px;
+    mix-blend-mode: multiply; /* Menyatukan latar putih logo dengan warna krem */
+}
+
+.ruri-navbar .nav-link {
+    color: #5C3A21;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+
+.ruri-navbar .nav-link:hover,
+.ruri-navbar .nav-link.active {
+    background-color: #5C3A21;
+    color: #FFF8E7;
+}
+
+/* Tombol, Kartu, & Kotak */
+.btn-ruri {
+    background-color: #5C3A21;
+    color: #FFF8E7;
+    border-radius: 10px;
+}
+
+.btn-ruri:hover {
+    background-color: #3B2313;
+    color: #FFFFFF;
+}
+
+.btn-ruri-outline {
+    border: 1px solid #5C3A21;
+    color: #5C3A21;
+    border-radius: 10px;
+}
+
+.btn-ruri-sand, .ruri-box {
+    background-color: #F5E8C7;
+    color: #5C3A21;
+}
+
+.ruri-badge {
+    background-color: #F5E8C7;
+    color: #5C3A21;
+}
+
+.ruri-card {
+    background-color: #FFFFFF;
+    border: 2px solid #F5E8C7;
+    border-radius: 16px;
+}
+
+/* Tombol Filter Menu & Opsi Custom Drink */
+.ruri-tab {
+    border: 1px solid #5C3A21;
+    color: #5C3A21;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.ruri-tab.active,
+.btn-check:checked + .ruri-tab {
+    background-color: #5C3A21;
+    color: #FFF8E7;
+}
+
+/* Footer */
+.ruri-footer {
+    background-color: #3B2313;
+    color: #FFF8E7;
+}
