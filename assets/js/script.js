@@ -51,6 +51,7 @@ $(document).ready(function () {
                     <div class="d-flex justify-content-between align-items-center p-2 mb-2 rounded ruri-box">
                         <div>
                             <strong class="d-block small">${item.name}</strong>
+                            ${infoTambahan}
                             <small>Rp ${item.price.toLocaleString('id-ID')}</small>
                         </div>
                         <button class="btn btn-sm btn-danger btn-hapus" data-index="${index}">Hapus</button>
@@ -63,9 +64,12 @@ $(document).ready(function () {
         $('#cartTotal').text('Rp ' + total.toLocaleString('id-ID'));
     }
 
-    // Tambah menu biasa ke keranjang
+    // Pastikan bagian ini juga sudah menyimpan desc
     $('.btn-add').click(function () {
-        cart.push({ name: $(this).data('name'), price: parseInt($(this).data('price')) });
+        cart.push({
+            name: $(this).data('name'),
+            price: parseInt($(this).data('price'))
+        });
         tampilkanCart();
         alert('Berhasil ditambahkan ke keranjang!');
     });
@@ -74,7 +78,7 @@ $(document).ready(function () {
     $('#btnAddCustom').click(function () {
         cart.push({ name: teksCustom, price: hargaCustom });
         tampilkanCart();
-        alert('Custom drink berhasil ditambahkan ke keranjang!');
+        alert('Minuman Racikan berhasil ditambahkan ke keranjang!');
     });
 
     // Hapus item dari keranjang

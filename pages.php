@@ -56,7 +56,7 @@ switch ($page):
 ?>
     <div class="text-center mb-4">
         <h1 class="font-title">Menu</h1>
-        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-">
             <?php foreach (['all' => 'All', 'coffee' => 'Coffee', 'tea' => 'Tea', 'snack' => 'Snack', 'dessert' => 'Dessert'] as $key => $label): ?>
                 <button class="btn ruri-tab <?= ($key == 'all') ? 'active' : '' ?>" data-filter="<?= $key ?>"><?= $label ?></button>
             <?php endforeach; ?>
@@ -119,9 +119,9 @@ switch ($page):
             $galeri = [
                 ['col-md-8', '270px', 'Manual Brew Bar', 'Penyeduhan V60 menggunakan biji kopi Nusantara segar.', 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80', ''],
                 ['col-md-4', '270px', 'Latte Art', 'Microfoam lembut di setiap cangkir.', 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80', ''],
-                ['col-md-4', '220px', 'Cozy Corner', 'Area duduk hangat bernuansa kayu.', 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80', ''],
-                ['col-md-4', '220px', 'Morning Pastry', 'Croissant dipanggang setiap pagi.', 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', ''],
-                ['col-md-4', '220px', 'Roasted Beans', 'Klik untuk melihat jenis beans →', 'assets/img/arabika.webp', 'index.php?page=gallery&view=beans']
+                ['col-md-4', '270px', 'Cozy Corner', 'Area duduk hangat bernuansa kayu.', 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80', ''],
+                ['col-md-4', '270px', 'Morning Pastry', 'Croissant dipanggang setiap pagi.', 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', ''],
+                ['col-md-4', '270px', 'Roasted Beans', 'Klik untuk melihat jenis beans →', 'assets/img/arabika.webp', 'index.php?page=gallery&view=beans']
             ];
 ?>
         <h1 class="font-title text-center mb-4">Gallery</h1>
@@ -149,7 +149,6 @@ switch ($page):
         endif;
     break;
 
-  
     // 5. HALAMAN CUSTOM DRINK
   
     case 'custom':
@@ -210,7 +209,7 @@ switch ($page):
             <div class="p-4 rounded-4 ruri-box">
                 <h4 class="font-title mb-3">Preview Order</h4>
                 <div class="p-3 rounded-3 bg-white border mb-3">
-                    <p id="previewText" class="fw-semibold mb-2">Latte - oat milk, sugar 50%, ice level 50%, extra shot</p>
+                    <p id="previewText" class="fw-semibold mb-2">Latte, oat milk, sugar 50%, ice level 50%, extra shot</p>
                     <hr>
                     <div class="d-flex justify-content-between align-items-center">
                         <span>Total Order:</span>
@@ -226,9 +225,9 @@ switch ($page):
     break;
 
    
-    // 6. HALAMAN CREDIT (Web Developer Profile)
+    // 6. HALAMAN dev (Web Developer Profile)
     
-   case 'credit':
+   case 'dev':
 ?>
     <h1 class="font-title text-center mb-4">Web Developer Profile</h1>
     <div class="row justify-content-center">
@@ -254,11 +253,40 @@ switch ($page):
             </div>
         </div>
     </div>
-
 <?php
     break;
 
-    // 7. HALAMAN HOME (Default)
+    case 'promo';
+?>
+    <div class="text-center mb-4">
+        <h1 class="font-tittle">Promo Mingguan</h1>
+        <p>Promo Mingguan Cafe</p>
+    </div>
+    <div class="row gd-4 justify-content-center">
+
+        <div class="col-md-4">
+            <div class="card ruri-card p-4 text-center h-100">
+                <span class="badge ruri-badge align-self-center mb-2">Promo Mingguan</span>
+                <p class="small">Ruri cafe "Hojicha latte" + "Tiramisu" Hanya Rp 30.000 Setiap hari Minggu!.</p>
+                <button class="btn btn-ruri btn-add mt-auto" 
+                    data-name="Promo Mingguan"
+                    data-price="30000" >+ Cart</button>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="card ruri-card p-4 text-center h-100">
+                <span class="badge ruri-badge align-self-center mb-2">Promo Harian</span>
+                <p class="small">Ruri cafe "Hojicha latte" dan "Latte" Hanya Rp 12.000 Setiap hari Kamis!.</p>
+                <button class="btn btn-ruri btn-add mt-auto" data-name="Promo Kamis" data-price="12000">+ Cart</button>
+            </div>
+        </div>
+        
+  </div>
+<?php
+    break;
+
+    // 7. HALAMAN HOME (Default) selalu di bawah karna default
     
     default:
         $rekomendasi = [
@@ -280,7 +308,7 @@ switch ($page):
                         <a href="index.php?page=custom" class="btn btn-ruri-outline px-4">Racik Sekarang!</a>
                     </div>
                     <div class="col-lg-6">
-                        <img src="assets/img/matcha latte.jpg" class="img-fluid rounded-4 w-100" style="height: 290px; object-fit: cover;" alt="Slide 1">
+                        <img src="assets/img/matcha .webp" class="img-fluid rounded-4" style=" height: 450px; width: 600px;   object-fit: cover;" alt="Slide 1">
                     </div>
                 </div>
             </div>
@@ -293,7 +321,7 @@ switch ($page):
                         <a href="index.php?page=custom" class="btn btn-ruri px-4">Racik Sekarang</a>
                     </div>
                     <div class="col-lg-6">
-                        <img src="assets/img/americano.jpg" class="img-fluid rounded-4 w-100" style="height: 290px; object-fit: cover;" alt="Slide 2">
+                        <img src="assets/img/amer.webp" class="img-fluid rounded-4" style="height: 450px; width: 600px; object-fit: cover;" alt="Slide 2">
                     </div>
                 </div>
             </div>
@@ -324,5 +352,5 @@ switch ($page):
 
 <?php
     break;
-endswitch;
+endswitch; 
 ?>

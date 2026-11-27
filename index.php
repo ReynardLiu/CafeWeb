@@ -1,8 +1,8 @@
 <?php
-// 1. Daftar 6 halaman utama yang valid
-$daftar_halaman = ['home', 'about', 'menu', 'gallery', 'custom', 'credit'];
+// 1. Daftar 7 halaman utama yang valid
+$daftar_halaman = ['home', 'about', 'menu', 'gallery', 'custom', 'dev', 'promo'];
 
-// 2. Tangkap ?page= dari URL (jika kosong, otomatis ke 'home')
+// 2. Tangkap ?page= dari URL
 $page = (isset($_GET['page']) && in_array($_GET['page'], $daftar_halaman)) ? $_GET['page'] : 'home';
 ?>
 <!DOCTYPE html>
@@ -42,7 +42,8 @@ $page = (isset($_GET['page']) && in_array($_GET['page'], $daftar_halaman)) ? $_G
                     <li class="nav-item"><a class="nav-link <?= ($page == 'menu') ? 'active' : '' ?>" href="index.php?page=menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link <?= ($page == 'gallery') ? 'active' : '' ?>" href="index.php?page=gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link <?= ($page == 'custom') ? 'active' : '' ?>" href="index.php?page=custom">Custom Drink</a></li>
-                    <li class="nav-item"><a class="nav-link <?= ($page == 'credit') ? 'active' : '' ?>" href="index.php?page=credit">Credit</a></li>
+                    <li class="nav-item"><a class="nav-link <?= ($page == 'promo') ? 'active' : '' ?>" href="index.php?page=promo">Promo</a></li>        
+                    <li class="nav-item"><a class="nav-link <?= ($page == 'dev') ? 'active' : '' ?>" href="index.php?page=dev">Dev</a></li>
                 </ul>
             </div>
         </div>

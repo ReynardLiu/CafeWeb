@@ -1,0 +1,15 @@
+cafe web/
+├── index.php                 # Kerangka utama: Validasi URL, Navbar, include 'pages.php', Modal Cart & Footer
+├── pages.php                 # Pengendali konten 7 halaman menggunakan percabangan PHP switch ($page)
+└── assets/
+    ├── css/
+    │   └── style.css         # Aturan warna tema, kartu, tombol, mix-blend-mode logo & layout Custom Drink
+    ├── js/
+    │   └── script.js         # Logika jQuery: Filter kategori menu, kalkulator Custom Drink & localStorage Cart
+    └── img/
+        ├── logo cafe.png     # Logo ikonik kucing hitam memeluk cangkir kopi Café Ruri
+        ├── developer.webp    # Foto profil web developer (format WebP ringan)
+        ├── latte.jpg         
+        ├── robusta.jpg       
+        ├── arabica.jpg      
+        └── houseblend.jpg    
